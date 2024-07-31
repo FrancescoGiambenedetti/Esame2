@@ -1,0 +1,123 @@
+@import "variabili";
+.riga {
+    padding-top: 80px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.colonnaSinistra,
+.colonnaDestra {
+    text-align: justify;
+    width: 25%;
+    .card {
+        margin-top: 4px;
+        padding: 8px 10px;
+        h2 {
+            font-size: $fontsizeh2 * 0.9;
+            text-align: center;
+            padding-top: 12px;
+        }
+        p {
+            font-size: $fontsizeh2 * 0.7;
+            text-align: center;
+            padding-top: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: $colorfontprimary;
+            &:hover {
+                color: $colorfonthover2;
+                cursor: pointer;
+            }
+        }
+        img {
+            width: 45%;
+            margin: 0 auto;
+        }
+    }
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.card {
+    background-color: $colorcards;
+    box-shadow: $shadowcards;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 8px;
+    flex: 1 1 calc(25% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 20px;
+    a {
+        text-decoration: none;
+        color: $colorfontprimary;
+        &:hover {
+            color: $colorfonthover2;
+            cursor: pointer;
+        }
+    }  
+}
+.card h2 {
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: $fontsizeh2;
+    text-align: center;
+    color: $colorfontprimary;
+}
+.card p {
+    text-align: center;
+    margin: 0;
+    font-size: $fontsizep1;
+    color: $colorfontprimary;
+}
+@media screen and (max-width: $maxwidthquery4) {
+    .riga {
+        padding-bottom: 10px;
+    }
+    .cards-container {
+    padding-top: 16px;
+    flex-direction: column;
+    align-items: center;
+    }
+    .card {
+        flex: 1 1 80%;
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: $maxwidthquery1) {
+    .riga {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .colonnaDestra,
+    .colonnaSinistra {
+        width: 70%;
+        margin: auto;
+    }
+    .cards-container {
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    }
+    .card { 
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,64 @@
+.dettaglio-lavoro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dettaglio-lavoro .left, .dettaglio-lavoro .right {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+.left {
+    text-align: center;
+    color: $colorfontprimary;
+    text-transform: uppercase;
+    font-size: $fontsizeh2;
+}
+.right {
+    color: $colorfontprimary;
+    font-size: $fontsizep1;
+    padding-top: 120px;
+    a {
+        color: $colorfontprimary;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            color: $colorfonthoverdettaglio;
+        }
+    }
+}
+.dettaglio-lavoro .left img {
+    width: 50%;
+}
+@media (max-width: $maxwidthquery1) {
+    .dettaglio-lavoro {
+        flex-direction: column;
+
+        .left img {
+            width: 50%;
+        }
+    }
+    .dettaglio-lavoro .right {
+        padding: 20px;
+    }
+    .right {
+        text-align: center;
+        padding-top: 0;
+    }
+}
+@media (max-width: $maxwidthquery2) {
+    .dettaglio-lavoro {
+        flex-direction: column;
+
+        .left img {
+            width: 70%;
+        }
+    }
+    .dettaglio-lavoro .right {
+        padding: 20px;
+    }
+    .right {
+        text-align: center;
+        padding-top: 0;
+    }
+}

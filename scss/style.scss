@@ -1,0 +1,199 @@
+@import "variabili"; /* vengono importati gli altri fogli scss */
+@import "home";
+@import "chisono";
+@import "servizi";
+@import "dettaglio";
+@import "contattami";
+*, /* in questo foglio di stile principale sono presenti gli elementi fissi del progetto: impaginazione, header e footer (con relative media queries per il responsive) */
+::after, /* da qui modifiche css generali */
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fontprimary;
+    cursor: default;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background: url('../img/sfondo.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#menu li a.active {
+    font-weight: $selectedwordweight;
+}
+nav.hamburger-menu {
+    background-color: $colornavbarfooterbutton;
+    padding: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+nav.hamburger-menu .logo {
+    margin: 0 8px 0 4px;
+}
+nav.hamburger-menu .logo img {
+    height: 100px;
+    width: auto;
+}
+nav.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+}
+nav.hamburger-menu li {
+    text-transform: uppercase;
+    list-style: none;
+    margin: 0 40px 0 0;
+}
+nav.hamburger-menu a {
+    color: $colorfontnavbarfooter;
+    text-decoration: none;
+    font-size: $fontsizenavbar;
+    padding: 10px 0;
+}
+nav.hamburger-menu a:hover {
+    cursor: pointer;
+    color: $colorfonthover;
+    font-size: $fontsizenavbarhover;
+}
+nav.hamburger-menu #controllo {
+    opacity: 0;
+}
+main {
+    flex: 1;
+}
+footer { /* da qui modifiche css del footer */
+    padding: 30px 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: lowercase;
+    font-size: $fontsizefooter;
+    background-color: $colornavbarfooterbutton;
+    color: $colorfontnavbarfooter;
+    text-align: center;
+    p, address {
+        color: $colorfontnavbarfooter;
+        text-transform: uppercase;
+    }
+    a {
+        color: $colorfontnavbarfooter;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+        color: $colorfonthover;
+        }
+    }
+}
+@media all and (max-width: $maxwidthquery1) { /* primo media query */
+    nav.hamburger-menu {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    nav.hamburger-menu .label-controllo {
+        position: fixed;
+        left: 20px;
+        width: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    nav.hamburger-menu .label-controllo>span, /* da qui css per creare menù ad hamburger */
+    nav.hamburger-menu .label-controllo>span::before,
+    nav.hamburger-menu .label-controllo>span::after {
+        position: absolute;
+        height: 3px;
+        background-color: $colorfontnavbarfooter;
+        transition-duration: .25s;
+    }
+    nav.hamburger-menu .label-controllo>span {
+        width: 24px;
+        cursor: pointer;
+    }
+    nav.hamburger-menu .label-controllo>span::before {
+        content: " ";
+        width: 30px;
+        top: -8px;
+        cursor: pointer;
+    }
+    nav.hamburger-menu .label-controllo>span::after {
+        content: "";
+        width: 36px;
+        top: 8px;
+        cursor: pointer;
+    }
+    nav.hamburger-menu #menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 40%;
+        height: 100%;
+        padding: 80px 20px;
+        background-color: $colornavbarfooterbutton;
+        box-shadow: 2px 2px 6px rgba(82, 80, 80, 0.252);
+        transition-duration: .25s;
+    }
+    nav.hamburger-menu .vociMenu {
+        display: block;
+        padding: 12px 24px;
+        color: $colorfontnavbarfooter;
+        font-size: $fontsizenavbar;
+        transition-duration: .25s;
+    }
+    #controllo:checked+.label-controllo>span {
+        top: 0;
+        transform: rotate(45deg);
+        top: -20px;
+        cursor: pointer;
+    }
+    #controllo:checked+.label-controllo>span::before {
+        top: 0;
+        transform: rotate(0deg);
+        width: $widthxnavbar;
+        cursor: pointer;
+    }
+    #controllo:checked+.label-controllo>span::after {
+        top: 0;
+        transform: rotate(90deg);
+        width: $widthxnavbar;
+        cursor: pointer;
+    }
+    #controllo:checked~#menu {
+        left: 0 !important;
+    }
+    footer {
+        flex-direction: column;
+        padding: 8px;
+    }
+}
+@media all and (max-width: $maxwidthquery2) { /* ultimi 2 media queries */
+    nav.hamburger-menu #menu {
+        width: 50%;
+    }
+    nav.hamburger-menu {
+        @if $navbarvisibility == no {
+        background-color: transparent;
+        box-shadow: 0 0 0;
+        }
+        @else {}
+    }
+}
+@media all and (max-width: $maxwidthquery3) {
+    nav.hamburger-menu #menu {
+        width: 60%;
+    }
+}

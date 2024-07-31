@@ -1,0 +1,58 @@
+[
+    {
+        
+        "id": 1,
+        "title": "Cristal",
+        "date": "28/06/2024",
+        "description": "Sito dello studio dentistico Cristal",
+        "image": "./img/cristal_foto.png",
+        "client": "Studio Cristal S.R.L.",
+        "piva": "01020304050",
+        "rating": "4.3 / 5",
+        "link": "./cristal/index.html"
+    },
+    {
+        "id": 2,
+        "title": "Contab",
+        "date": "12/01/2024",
+        "description": "Software di contabilità aziendale",
+        "image": "./img/contab_foto.png",
+        "client": "Contab S.R.L.",
+        "piva": "13579246800",
+        "rating": "4.5 / 5",
+        "link": "./sito/index.html"
+    },
+    {
+        "id": 3,
+        "title": "Keep Fitness",
+        "date": "21/07/2024",
+        "description": "Sito della nuova palestra di Parma in Via Roma, 12",
+        "image": "./img/palestra_foto.png",
+        "client": "Palestra Keep Fitness",
+        "piva": "0012345987",
+        "rating": "4.2 / 5",
+        "link": "./sito/index.html"
+    },
+    {
+        "id": 4,
+        "title": "Michelemmà",
+        "date": "27/07/2024",
+        "description": "Sito del ristorante pizzeria Michelemmà di Modena in Via Umbria, 14",
+        "image": "./img/pizzeria_foto.png",
+        "client": "Ristorante Pizzeria Michelemmà",
+        "piva": "0011002290",
+        "rating": "5 / 5",
+        "link": "./sito/index.html"
+    },
+    {
+        "id": 5,
+        "title": "TPER",
+        "date": "30/07/2024",
+        "description": "Sito della nuova linea di trasporto di Bologna",
+        "image": "./img/autobus_foto.png",
+        "client": "TPER S.P.A.",
+        "piva": "0011002290",
+        "rating": "4.7 / 5",
+        "link": "./sito/index.html"
+    }
+]

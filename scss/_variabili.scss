@@ -1,0 +1,38 @@
+$fontprimary: 'Courier New', Courier, monospace; // stile font usato per tutti i fogli //
+
+// colore sfondo dei 3 elementi //
+$colornavbarfooterbutton: rgb(49, 45, 39); // colore navbar, footer, button hover //
+$colobackgroundformselectedbutton: rgba(60, 129, 203, 0.145); // colore form selezionato in "contattami" e colore bordo button //
+
+// colore font //
+$colorfontprimary: rgb(0, 0, 0); // colore primario usato per i testi //
+$colorfontnavbarfooter: rgb(209, 216, 225); // colore usato per le parole nella navbar //
+$colorfonthover: rgb(209, 216, 300); // colore usato per le parole hover nell'header e nel footer //
+$colorfonthover2: rgb(214, 216, 228); // colore usato per le parole hover nella sezione centrale //
+$colorfonthoverdettaglio: rgb(21, 31, 219); // colore usato per i link hover nella sezione "dettaglio" dei lavori //
+$colorcards: rgba(210, 189, 186, 0.417); // colore delle cards (in "chi sono" e in "servizi") //
+
+// spessore font parola selezionata navbar //
+$selectedwordweight: bold; // "normal" non cambia nulla, "bold" rende la parola selezionata spessa //
+
+// grandezze dei vari font in tutte le pagine //
+$fontsizep1: 18px; // riguarda i paragrafi di testo //
+$fontsizeh1: 40px; // riguarda i titoli h1 //
+$fontsizeh2: 26px; // riguarda i titoli h2 //
+$fontsizenavbar: 24px; // riguarda le parole nella navbar //
+$fontsizenavbarhover: 26px; // riguarda le parole nella navbar hover //
+$widthxnavbar: 32px; // riguarda la "x" creata con dal menu hamburger //
+$fontsizeform: 18px; // riguarda le parole nel form in "contattami" (anche il button) //
+$fontsizefooter: 10px; // riguarda le parole nel footer //
+
+// box shadow cards //
+$shadowcards: 0 4px 8px rgba(0, 0, 0, 0.1); // delle cards (in "chi sono" e in "servizi") //
+
+// varie dimensioni mediaquery //
+$maxwidthquery1: 800px;
+$maxwidthquery2: 510px;
+$maxwidthquery3: 410px;
+$maxwidthquery4: 1090px;
+
+// visibilità navbar sotto "maxwidthquery2" //
+$navbarvisibility: no; // impostare "yes" o "no" //

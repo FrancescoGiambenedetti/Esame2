@@ -1,0 +1,117 @@
+@import "variabili";
+.homepage {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 20%;
+    padding-left: 20%;
+    text-align: center;
+    h1 {
+        text-transform: uppercase;
+        font-size: $fontsizeh1;
+        color: $colorfontprimary;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: $fontsizeh2;
+        color: $colorfontprimary;
+    }
+    p {
+        font-size: $fontsizep1;
+        color: $colorfontprimary;
+    }
+}
+.linguaggi-usati {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    img {
+        padding: 6px;
+        width: 15%;
+        cursor: pointer;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: $fontsizeh2;
+        color: $colorfontprimary;
+    }
+}
+.social-links {
+    text-align: center;
+    padding: 20px;
+    h2 {
+        text-transform: uppercase;
+        font-size: $fontsizeh2;
+        color: $colorfontprimary;
+    }
+    a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        img {
+            cursor: pointer;
+        }
+    }
+    img {
+        width: 120%;
+        height: auto;
+    }
+}
+
+.map-section {
+    text-align: center;
+}
+.map-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 266px;
+    height: 200px;
+    border: 2px solid #ddd;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+@media all and (max-width: $maxwidthquery1) {
+    .homepage {
+        padding: 30px 10%;
+    }
+    .linguaggi-usati {
+        padding: 8px;
+        img {
+            width: 30%;
+            padding-bottom: 30px;
+        }
+    }
+    .social-links {
+        gap: 10px;
+        a {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .map-section {
+        text-align: center;
+        padding: 20px;
+        padding-bottom: 20px;
+    }
+    .map-container {
+        display: inline-block;
+        width: 100%;
+        max-width: 200px;
+        height: 150px;
+        border: 2px solid #ddd;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+@media all and (max-width: $maxwidthquery2) {
+    .map-container {
+        max-width: 266px;
+        height: 200px;
+    }
+}
